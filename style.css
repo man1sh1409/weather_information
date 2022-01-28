@@ -29,10 +29,12 @@ input{
     display: flex;
     height: 10%;
     width: 100%;
+    flex-direction:row;
 }
 
 #city{
     width: 60%;
+    flex-shrink: 2;
 }
 
 #searchBtn{
@@ -62,4 +64,37 @@ h2{
     text-transform: capitalize;
     font-size: 1.3rem;
     
+}
+
+@media  only screen and (max-width:500px) {
+
+    .box{
+        flex-direction: column;
+    }
+    #city{
+        width:85%
+    }
+    #searchBtn{
+        padding: 3px 0px;
+        width: 69%;
+        margin: 9px 20px;
+    }
+    .desc{
+        height: 39%;
+        width: 100%;
+        background-color: #e7e7e7;
+        margin: 45px 0px;
+    }
+}
+@media only screen and (min-width:500px) and (max-width:700px){
+   #searchBtn {
+    cursor: pointer;
+    padding: 0px;
+    margin: 0px 4px;
+    width: 42%;
+        
+    }
+    .desc{
+        width: 96%;
+    }
 }
